@@ -28,7 +28,7 @@ ui <- fluidPage(
             
             # Input: Select a file ----
             fileInput(inputId = "files", 
-                      label = "Choose FHX File",
+                      label = "Choose FHX File(s)",
                       multiple = TRUE,
                       accept = c(".FHX",
                                  ".fhx"))
@@ -36,7 +36,7 @@ ui <- fluidPage(
         # 
         # Main panel for displaying outputs ----
         mainPanel(
-            
+            includeMarkdown("text_intro.Rmd"),
             # Output: Data file ----
             tableOutput("contents")
             
